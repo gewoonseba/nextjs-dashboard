@@ -1,3 +1,16 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:import/errors",
+    "prettier",
+    "next"
+  ],
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "extensions": [".ts", ".tsx"],
+        "map": [["@", "."]]
+      }
+    }
+  }
 }
